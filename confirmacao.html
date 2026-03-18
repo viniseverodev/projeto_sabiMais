@@ -166,7 +166,6 @@
     class="logo"
   />
 
-  <!-- Conteúdo dinâmico preenchido pelo JS -->
   <div id="icon" class="icon-wrap"></div>
   <div id="badge" class="badge"></div>
   <h1 id="titulo"></h1>
@@ -187,10 +186,7 @@
 </div>
 
 <script>
-  // ─── CONFIGURAÇÃO ────────────────────────────────────────────────
-  // Substitua pela URL real do seu webhook no Make:
-  const WEBHOOK_URL = "https://hook.make.com/SEU_WEBHOOK";
-  // ─────────────────────────────────────────────────────────────────
+  const WEBHOOK_URL = "https://hook.us2.make.com/pavokvpn4g15rvlemuk2imxk48iupner";
 
   const params   = new URLSearchParams(window.location.search);
   const resposta = params.get("resposta") || "nao";
@@ -199,7 +195,6 @@
 
   const isSim = resposta === "sim";
 
-  // Preenche a UI de acordo com a resposta
   const icon     = document.getElementById("icon");
   const badge    = document.getElementById("badge");
   const titulo   = document.getElementById("titulo");
@@ -221,7 +216,6 @@
     mensagem.textContent = "Agradecemos por responder. Se mudar de ideia no futuro, é só entrar em contato com a gente. Será um prazer te receber!";
   }
 
-  // Chama o webhook silenciosamente em segundo plano
   const loading = document.getElementById("loading");
   const erroMsg = document.getElementById("erroMsg");
 
